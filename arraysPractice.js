@@ -35,7 +35,7 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
   //Code Here
-reversedLooper = letters => letters.reverse().forEach(el=>{alert(el)});
+reversedLooper = (letters) => letters.reverse().forEach(el=>{alert(el)});
 
 //Next Problem
 
@@ -112,6 +112,11 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
   removeItem = (myGroceryList,item)=>myGroceryList.filter(a=>a!==item);
+  addItem = (myGroceryList,item)=>{
+    
+    myGroceryList.push(item);
+  return myGroceryList;
+}
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
@@ -221,13 +226,16 @@ array with those four objects. After that console.log the length of the Array an
 sure that it's equal to 4. */
 
   //Code Here
+devMountainEmployees.push(tyler,cahlan,ryan,colt)
+console.log(devMountainEmployees.length); 
+
 
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
   //Code Here
 
-
+devMountainEmployees.splice(devMountainEmployees.indexOf(cahlan),1)
 
 
 //NEXT PROBLEM
@@ -239,6 +247,7 @@ of Data is to have an Array full of objects. */
 //Create an empty array called users.
 
   //Code Here
+var users = [];
 
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
@@ -253,6 +262,22 @@ var user1 = {
 
 //Your Code Here
 
+var user3 = {
+  name: 'Lyler McGinnis',
+  email: 'tllermcginnis33@gmail.com',
+  password: 'eLoveJavaScript',
+  username: 'dnfiniateLoop'
+};
+
+var user3 = {
+  name: 'Gyler McGinnis',
+  email: 'gylermcginnis33@gmail.com',
+  password: 'uLoveJavaScript',
+  username: 'unfiniateLoop'
+};
+
+users.push(user1,user2, user3);
+
 /*Now you have a very common data structure. Twitter is a good use case.
 It's easy to imagine that your followers list on Twitter is an Array full or objects
 and those objects contain properties about the specific person you follow.*/
@@ -262,5 +287,7 @@ objects until you find Tyler's account (use tylermcginnis33@gmail.com to find hi
 Once you find the particular index he's located in, delete him from the array.*/
 
   //Code Here
+  users.splice(users.indexOf(user1),1)
+
 
 //The activity we just did is very much how data works in 'the real world'.
